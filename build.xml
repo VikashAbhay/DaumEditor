@@ -3,8 +3,8 @@
     <property file="build.properties"/>
     <taskdef resource="net/sf/antcontrib/antlib.xml" classpath="${build.lib.antcontrib}" />
 	<taskdef resource="net/sf/antcontrib/antcontrib.properties" classpath="${build.lib.antcontrib}"/>
-	<!-- <taskdef classname="net.bluecow.googlecode.ant.GoogleCodeUploadTask" classpath="${build.lib.gcuploader}" name="gcupload"/> -->
-    <!-- main tasks ====================================================== -->
+	   <!-- <taskdef classname="net.bluecow.googlecode.ant.GoogleCodeUploadTask" classpath="${build.lib.gcuploader}" name="gcupload"/> -->
+           <!-- main tasks ====================================================== -->
     <target name="buildall" description="clean and build all" depends="clean, packaging">
 	</target>
     <target name="clean" description="remove all artifacts">
@@ -50,7 +50,7 @@
             </catch>
         </trycatch>
     </target>
-    <!-- build javascript tasks ========================================== -->
+                   <!-- build javascript tasks ========================================== -->
     <target name="build-js" depends="prepare_build_js">
         <!-- TODO escape > merge > minify 순이어야 효율적이다. -->
         <ant target="merge_javascripts"/>
@@ -117,7 +117,7 @@
             </sequential>
         </for>
     </target>
-    <!-- build css tasks ================================================= -->
+                                <!-- build css tasks ================================================= -->
     <target name="build-css" depends="prepare_build_css">
         <ant target="merge_css"/>
         <ant target="minify_css"/>
